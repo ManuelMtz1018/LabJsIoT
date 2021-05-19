@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LabJs</title>
+    
+    <link rel="stylesheet" href="./css/sockets-style.css">
+</head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body class="container">
+    <h1 class="mt-2">LabJS</h1>
+    <hr>
+    <div id="containerButtons">
+
+        <button disabled="true" id="alarmHouse" class="buttonCustom alarmOff">
+            <div class="indicator-body">
+                <p>ALARM</p>
+                <h4>Garage</h4>
+            </div>
+            <div class="indicator-icon">
+                <i class="fas fa-bell icon-custom" id="icon-general"></i>                            
+            </div>
+        </button>
+       
+        <button id="buttonKitchen" class="buttonCustom turnOffButton">
+            <div class="indicator-body">
+                <p>KITCHEN</p>
+                <h4>60W</h4>
+            </div>
+            <div class="indicator-icon">
+                <i class="fas fa-sink icon-custom" id="icon-general"></i>                            
+            </div>
+        </button>
+
+        <button id="buttonLiving" class="buttonCustom turnOffButton">
+            <div class="indicator-body">
+                <p>LIVING ROOM</p>
+                <h4>70W</h4>
+            </div>
+            <div class="indicator-icon">
+                <i class="fas fa-couch icon-custom" id="icon-general"></i>                            
+            </div>
+        </button>
+
+        <button id="buttonBath" class="buttonCustom turnOffButton">
+            <div class="indicator-body">
+                <p>BATHROOM</p>
+                <h4>65W</h4>
+            </div>
+            <div class="indicator-icon">
+                <i class="fas fa-toilet icon-custom" id="icon-general"></i>                            
+            </div>
+        </button>
+        
+    </div>   
+
+    <div id="chart-buttons-container" >
+        <div id="chart-container" class="container" >
+            <h3 style="text-align: center;">Signal from microcontroller</h3>
+            <canvas id="myChart" ></canvas>
+        </div>
+        
+        <div id="container-body-chart" class="container d-flex flex-column align-items-center">
+            <button id="graphButton" type="button" class="button-chart">Grapgh</button>
+            <button id="pauseButton" type="button" class="button-chart">Pause</button>
+            <label for="customRange1" class="form-label">- Zoom x +</label>
+            <input id="sliderZoomRealTime" type="range" class="form-range" min="1" max="20" value="10">
+            <label for="customRange1" class="form-label">- Zoom Y +</label>
+            <input id="sliderZoomOutY" type="range" class="form-range" min="1" max="120" value="30">
+            <br/> 
+            <label for="customRange1" class="form-label">- Zoom Center +</label>
+            <input id="sliderZoomOut" type="range" class="form-range" min="1" max="20" value="10" step="1">
+            <label for="customRange1" class="form-label">- Position +</label>
+            <input id="sliderPosition" type="range" class="form-range" min="1" max="10" value="10" step="1">
+        </div>
+    </div>
+
+    <script src="./socket.io/socket.io.js"></script>
+    <script type="module"  src="./js/socket-client.js"></script>    
+
+</body>
+</html>

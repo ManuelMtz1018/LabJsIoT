@@ -1,0 +1,132 @@
+body {
+    background-color: #faf9fb;
+    font-family: 'Open Sans', sans-serif;
+    margin: 2em;
+}
+.buttonCustom{
+    width: 200px;
+    height: 100px;
+    margin-top: 1em;
+    color: white;
+    border-radius: 1rem;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
+    font-size: 1.5em;
+    padding: .9em;
+}
+.turnOnButton{    
+    background: linear-gradient(#006b00,#0f9b0f);
+}
+.turnOffButton{
+    background: linear-gradient(#00141c,#203a43);
+}
+.indicator-body{
+    color:white;
+    display:flex;
+    flex-direction: column;  
+    justify-content: center
+}
+.indicator-body p{
+    font-size: 0.35em;
+}
+.indicator-body h4,p{
+    margin: 0px 0;
+    text-align:left;
+}
+.indicator-body h4{
+    color: rgb(25, 255, 25);
+}
+.indicator-icon{
+    display:flex;
+    justify-content:flex-end;
+    align-items: baseline;
+}
+.icon-custom{
+    background-color: #000035;
+    font-size:15px;
+    padding: 5px;
+    border-radius: 50px;
+}
+#icon-general{
+    color: rgb(25, 255, 25);
+}
+
+.bathroomOn{
+    background: linear-gradient(#314755,#26a0da);   
+}
+
+.livingOn{
+    background: linear-gradient(#FF512F,#F09819);
+}
+.alarmOn{
+    background: linear-gradient(#f67054,#be3f2a);
+}
+.alarmOff{
+    background: linear-gradient(#870000,#190A05);
+}
+#containerButtons{
+    display: flex;
+    justify-content: space-around;   
+}
+
+#chart-buttons-container{
+    margin-top: 1em;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
+}
+#container-body-chart{
+    width: 22%;
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.button-chart{
+    background-color: #4726da;
+    margin-bottom: 10px;
+    color: white;
+    padding: 0.6em;
+    font-size: 1em;
+    border: 1px solid #4726da;
+    border-radius: 1em;
+    box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.4);
+}
+.button-chart:after{
+    background-color: #8455ff;
+}
+.button-chart:active{
+    background-color: #8455ff;
+}
+
+#container-body-chart input,label{
+    margin-bottom: 5px;
+}
+#myChart{
+    margin: auto;    
+}
+#chart-container{
+    width: 70%;
+    padding: 1em 0;
+}
+@media only screen and (max-width: 750px ) {
+
+    #chart-buttons-container{
+        flex-direction: column;
+        margin: 1.5em auto;    
+    }
+    #chart-container{
+        width: 100%;
+        margin: auto;
+    }
+    #container-body-chart{
+        width: auto;
+    }
+}
+@media only screen and (max-width: 500px ) {
+    #containerButtons{
+        flex-wrap: wrap;
+    }
+
+}
